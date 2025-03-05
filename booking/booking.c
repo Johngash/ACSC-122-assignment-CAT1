@@ -25,8 +25,6 @@ int main(){
   Room rooms[Max_rooms];
   Service services[10];
 
-  services_types[][10]
-
   int booked_rooms(){ //random number genarator to randomly book rooms
     for(i=0;i<10;i++){
       rooms[i].is_occupied = rand() % 2;
