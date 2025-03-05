@@ -16,7 +16,7 @@ int pricing;
 }Service;
 
 int main(){
-  const Max_rooms = sizeof(Room) * 10;  const Max_services = sizeof(Service) * 10;
+  const Max_rooms = 10;  const Max_services = 10;
   int i,x;
   int prefered_room;
 
@@ -24,6 +24,8 @@ int main(){
 
   Room rooms[Max_rooms];
   Service services[10];
+
+//  services_types[][10]
 
   int booked_rooms(){ //random number genarator to randomly book rooms
     for(i=0;i<10;i++){
