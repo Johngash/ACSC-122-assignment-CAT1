@@ -19,7 +19,7 @@ Student students[MAX_SIZE];//declares an array of structures
 printf("Enter names and marks of 10 students\n(SEPARATED BY A WHITESPACE eg: 'James 50',Marks between 1-100)\n");
 
 
-for(i=0;i<3;i++){
+for(i=0;i<10;i++){
 
 printf("Enter student's %d's NAME and MARKS; \n",i+1);
 scanf("%s %d",&students[i].name,&students[i].marks);
@@ -50,11 +50,11 @@ default:
 }
 }
 
-for(i=0;i<3;i++){
+for(i=0;i<10;i++){
   grading(students[i].marks);
 }
 
-for(i=0;i<3;i++){ //Lists out the students names
+for(i=0;i<10;i++){ //Lists out the students names
   printf("%d student: name; %s marks; %d grade; %c\n",
          i+1,students[i].name,students[i].marks,students[i].grade);
 }
