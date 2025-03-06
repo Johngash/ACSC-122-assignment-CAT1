@@ -19,42 +19,43 @@ Student students[MAX_SIZE];//declares an array of structures
 printf("Enter names and marks of 10 students\n(SEPARATED BY A WHITESPACE eg: 'James 50',Marks between 1-100)\n");
 
 
-for(i=0;i<10;i++){
+for(i=0;i<3;i++){
 
 printf("Enter student's %d's NAME and MARKS; \n",i+1);
 scanf("%s %d",&students[i].name,&students[i].marks);
 
-}
-int grading(student_score){
-int grading_score = student_score/10;
+while(students[i].marks <= 0 || students[i].marks >= 101){
+  printf("Enter correct MARKS for student %d;\n",i+1);
+  scanf("%d",&students[i].marks);
 
-switch(grading_score){ //switch case statement that grades students according to marks
-case 10:
-case 9:
-case 8:
+}
+
+
+}
+int grading(grading_score){
+
+  //if statements that grades students according to marks
+if(grading_score >= 80 && grading_score <= 100){
   students[i].grade = 'A';
-  break;
-case 7:
-case 6:
+}
+else if(grading_score >= 60 && grading_score < 80){
   students[i].grade = 'B';
-  break;
-case 5:
+}
+else if(grading_score >= 40 && grading_score < 50){
   students[i].grade = 'C';
-  break;
-case 4:
+}
+else if(grading_score >= 30 && grading_score< 40){
   students[i].grade = 'D';
-  break;
-default:
+}
+else{
   students[i].grade = 'E';
-  break;
 }
 }
-
 for(i=0;i<10;i++){
   grading(students[i].marks);
-}
+ }
 
-for(i=0;i<10;i++){ //Lists out the students names
+for(i=0;i<3;i++){ //Lists out the students names
   printf("%d student: name; %s marks; %d grade; %c\n",
          i+1,students[i].name,students[i].marks,students[i].grade);
 }
